@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    height: 100vh;
+}
+
+/* Ensure background covers the entire viewport and all content */
+.main {
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(asset/building-8259184_1920.jpg) no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 100px; /* Ensures content starts below the navbar */
+    padding: 20px;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2e682c;
+    padding: 10px 25px;
+    width: 99%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+    color: #0dee05;
+}
+
+/* Responsive Navbar for Mobile */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+         justify-content: space-between;
+    align-items: center;
+    }
+    .nav-links {
+        flex-direction: column;
+    }
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+/* Content Styling */
+.writeup {
+    max-width: 800px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #fff;
+}
+
+p {
+    color: #eee;
+}
+
+/* Responsive Text Sizing */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 16px;
+    }
+}
